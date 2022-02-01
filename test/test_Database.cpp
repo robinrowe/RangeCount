@@ -4,11 +4,12 @@
 
 #include <iostream>
 #include "../Database.h"
+#include "../Composer.h"
 using namespace std;
 
 int main(int argc,char* argv[])
 {	cout << "Testing Database" << endl;
-	Database database;
+	Database<Composer> database;
 	if(!database)
 	{	cout << "Database failed on operator!" << endl;
 		return 1;

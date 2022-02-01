@@ -6,8 +6,7 @@
 using namespace std;
 
 ostream& Name::Print(ostream& os) const
-{	// to-do
-	return os << "Name";
+{	return os << name;
 } 
 
 istream& Name::Input(std::istream& is) 

@@ -8,17 +8,19 @@
 #include <iostream>
 
 class Lifetime
-{	Lifetime(const Lifetime&) = delete;
-	void operator=(const Lifetime&) = delete;
-
+{//	Lifetime(const Lifetime&) = delete;
+//	void operator=(const Lifetime&) = delete;
 public:
+	int birth;
+	int death;
 	~Lifetime()
 	{}
 	Lifetime()
+	:	birth(0)
+	,	death(0)
 	{}
 	bool operator!() const
-	{	// to-do
-		return true;
+	{	return !birth;
 	}
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);

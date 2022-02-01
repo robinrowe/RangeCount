@@ -6,20 +6,45 @@
 #define Composer_h
 
 #include <iostream>
+#include "Name.h"
+#include "Lifetime.h"
+
+class RangeCount;
 
 class Composer
-{	Composer(const Composer&) = delete;
-	void operator=(const Composer&) = delete;
-
+{	const int maxYear = 1993;
 public:
+	Name name;
+	Lifetime lifetime;
 	~Composer()
 	{}
+	Composer(const Composer& c)
+	{	name = c.name;
+		lifetime = c.lifetime;
+	}
+	void operator=(const Composer& c)
+	{	name = c.name;
+		lifetime = c.lifetime;
+	}
 	Composer()
 	{}
 	bool operator!() const
-	{	// to-do
-		return true;
+	{	return !name;
 	}
+	bool operator<(const Composer& c) const
+	{	return name < c.name;	
+	}
+	int GetMin() const
+	{	return lifetime.birth;
+	}
+	int GetMax() const
+	{	if(!lifetime.death)
+		{	return maxYear;
+		}
+		return lifetime.death;
+	}
+	Composer(char* data);
+	void Set(RangeCount& rangeCount) const;
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

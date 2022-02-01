@@ -54,4 +54,7 @@ add_executable(test_Lifetime test/test_Lifetime.cpp)
 add_test(test_Lifetime test_Lifetime)
 add_executable(test_RangeCount test/test_RangeCount.cpp)
 add_test(test_RangeCount test_RangeCount)
+add_executable(test_Blob test/test_Blob.cpp)
+add_test(test_Blob test_Blob)
+
 add_executable(range_count range_count.cpp)

@@ -9,3 +9,5 @@ cmaker: class Name
 cmaker: class Lifetime
 cmaker: class RangeCount
 cmaker: program range_count
+cmaker: class Blog
+cmaker: class Blob

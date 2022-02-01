@@ -5,6 +5,7 @@
 #include "Database.h"
 using namespace std;
 
+#if 0
 ostream& Database::Print(ostream& os) const
 {	// to-do
 	return os << "Database";
@@ -14,3 +15,6 @@ istream& Database::Input(std::istream& is)
 {	// to-do
 	return is;
 }
+
+#endif
+
