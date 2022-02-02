@@ -11,3 +11,7 @@ RangeCount.h
 RangeCount.cpp
 Blob.h
 Blob.cpp
+Matrix.h
+Matrix.cpp
+Row.h
+Row.cpp

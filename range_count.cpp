@@ -27,13 +27,13 @@ int main(int argc,char* argv[])
 		return invalid_args;
 	}
 	const char* filename = argv[1];
-	Database<Composer> db;
+	Database db;
 	if(!db.Open(filename))
 	{	cout << "Database error" << endl;
 		return invalid_db;
 	}
 	RangeCount rangeCount;
-	if(!db.Set(rangeCount))
+	if(!rangeCount.Compute(db))
 	{	cout << "Range error" << endl;
 		return invalid_range;
 	}

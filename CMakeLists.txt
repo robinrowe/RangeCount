@@ -3,7 +3,7 @@
 # License: MIT License
 
 cmake_minimum_required(VERSION 3.8)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -58,3 +58,7 @@ add_executable(test_Blob test/test_Blob.cpp)
 add_test(test_Blob test_Blob)
 
 add_executable(range_count range_count.cpp)
+add_executable(test_Matrix test/test_Matrix.cpp)
+add_test(test_Matrix test_Matrix)
+add_executable(test_Row test/test_Row.cpp)
+add_test(test_Row test_Row)

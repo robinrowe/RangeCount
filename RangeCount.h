@@ -6,20 +6,23 @@
 #define RangeCount_h
 
 #include <iostream>
+#include "Composer.h"
+#include "Database.h"
+#include "Matrix.h"
 
 class RangeCount
 {	RangeCount(const RangeCount&) = delete;
 	void operator=(const RangeCount&) = delete;
-
 public:
+	Matrix matrix;
 	~RangeCount()
 	{}
 	RangeCount()
 	{}
 	bool operator!() const
-	{	// to-do
-		return true;
+	{	return !matrix;
 	}
+	bool Compute(const Database& db);
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

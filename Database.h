@@ -7,34 +7,28 @@
 
 #include <iostream>
 #include <set>
-#include "RangeCount.h"
 #include "Blob.h"
+#include "Composer.h"
 
-template<typename T>
 class Database
 {	Database(const Database&) = delete;
 	void operator=(const Database&) = delete;
-	std::set<T> data;
 	Blob blob;
 	unsigned count;
 	int minVal;
 	int maxVal;
+	typedef Composer T;
 public:
+	std::set<T> data;
 	~Database()
 	{}
-	Database<T>()
+	Database()
 	:	count(0)
 	,	minVal(0)
 	,	maxVal(0)
 	{}
 	bool operator!() const
 	{	return !count;
-	}
-	bool Set(RangeCount& rangeCount)
-	{	for(const auto& item : data)
-		{	item.Set(rangeCount);
-		}
-		return true;
 	}
 	bool Open(const char* filename)
 	{	if(!blob.Open(filename))
@@ -83,14 +77,13 @@ public:
 	}	}
 };
 
-template<typename T>
-std::ostream& operator<<(std::ostream& os,const Database<T>& database)
+inline
+std::ostream& operator<<(std::ostream& os,const Database& database)
 {	return database.Print(os);
 }
 
-
-template<typename T>
-std::istream& operator>>(std::istream& is,Database<T>& database)
+inline
+std::istream& operator>>(std::istream& is,Database& database)
 {	return database.Input(is);
 }
 

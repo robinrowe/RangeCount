@@ -41,9 +41,3 @@ Composer::Composer(char* data)
 	}
 	name.name = data + 11;
 }
-
-
-void Composer::Set(RangeCount& rangeCount) const
-{	rangeCount.Set()
-
-}

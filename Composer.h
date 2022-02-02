@@ -18,16 +18,17 @@ public:
 	Lifetime lifetime;
 	~Composer()
 	{}
+	Composer()
+	{}
 	Composer(const Composer& c)
 	{	name = c.name;
 		lifetime = c.lifetime;
 	}
+	Composer(char* data);
 	void operator=(const Composer& c)
 	{	name = c.name;
 		lifetime = c.lifetime;
 	}
-	Composer()
-	{}
 	bool operator!() const
 	{	return !name;
 	}
@@ -43,8 +44,6 @@ public:
 		}
 		return lifetime.death;
 	}
-	Composer(char* data);
-	void Set(RangeCount& rangeCount) const;
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };

@@ -14,3 +14,12 @@ istream& RangeCount::Input(std::istream& is)
 {	// to-do
 	return is;
 }
+
+bool RangeCount::Compute(const Database& db)
+{	for(const auto& composer : db.data)
+	{	for(int i = composer.GetMin();i<composer.GetMax();i++)
+		{	auto& r = matrix.Get(i);
+			r.data.insert(composer);
+	}	}
+	return true;
+}

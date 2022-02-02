@@ -11,3 +11,5 @@ cmaker: class RangeCount
 cmaker: program range_count
 cmaker: class Blog
 cmaker: class Blob
+cmaker: class Matrix
+cmaker: class Row
