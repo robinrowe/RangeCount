@@ -10,6 +10,10 @@ using namespace std;
 
 void Usage()
 {	cout << "Usage: range_count filename" << endl;
+	cout << "\tFind the most recent period of time, consecutive years,\n" 
+	"\twhen the largest number of composers were alive.\n"
+    "\tSome composers in the data don't have death dates,\n"
+	"\twere alive in 1993 (the last year of the data)."<< endl;
 }
 
 enum
@@ -21,7 +25,7 @@ enum
 };
 
 int main(int argc,char* argv[])
-{	cout << "range_count starting..." << endl;
+{	cout << "range_count starting..." << endl << endl;
 	if(argc < 2)
 	{	Usage();
 		return invalid_args;
@@ -37,7 +41,9 @@ int main(int argc,char* argv[])
 	{	cout << "Range error" << endl;
 		return invalid_range;
 	}
-	cout << rangeCount << endl;
-	cout << "range_count done!" << endl;
+	rangeCount.PrintMax(cout) << endl;
+	cout << rangeCount << endl
+		 << "range_count done!" << endl;
 	return ok;
 }
+

@@ -34,10 +34,23 @@ Composer::Composer(char* data)
 	}
 	istringstream is(data);
 	is >> lifetime.birth;
-	is.ignore();
-	const int c = is.get();
+	int c = is.get();
+	if('-' != c)
+	{	return;
+	}
+	c = is.peek();
 	if(' ' != c)
 	{	is >> lifetime.death;
 	}
-	name.name = data + 11;
+	name.last = data + 11;
+	char* comma = (char*) strchr(name.last,',');
+	if(!comma)
+	{	return;
+	}
+	*comma = 0;
+	char* space = comma + 1;
+	if(' ' != *space)
+	{	return;
+	}
+	name.first = space + 1;
 }

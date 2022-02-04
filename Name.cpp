@@ -6,7 +6,10 @@
 using namespace std;
 
 ostream& Name::Print(ostream& os) const
-{	return os << name;
+{	if(!*this)
+	{	return os << "(blank)";
+	}
+	return os << last;
 } 
 
 istream& Name::Input(std::istream& is) 

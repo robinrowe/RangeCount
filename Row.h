@@ -28,6 +28,7 @@ public:
 	{	return date < r.date;
 	}
 	std::ostream& Print(std::ostream& os) const;
+	std::ostream& PrintLastNames(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
 };
 

@@ -13,3 +13,4 @@ cmaker: class Blog
 cmaker: class Blob
 cmaker: class Matrix
 cmaker: class Row
+cmaker: class YearCount

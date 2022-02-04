@@ -10,22 +10,33 @@
 class Name
 {//	Name(const Name&) = delete;
 //	void operator=(const Name&) = delete;
-public:
-	const char* name;
-	~Name()
-	{}
-	Name()
-	:	name("")
-	{}
-	bool operator!() const
-	{	return !*name;
-	}
-	bool operator<(const Name& n) const
-	{	const int compare = strcmp(name,n.name);
-		if(compare<0)
+	bool IsBlank(const char* name) const
+	{	if(!name[0])
 		{	return true;
 		}
 		return false;
+	}
+public:
+	const char* first;
+	const char* last;
+	~Name()
+	{}
+	Name()
+	:	first("")
+	,	last("")
+	{}
+	bool operator!() const
+	{	return IsBlank(first) && IsBlank(last);
+	}
+	bool operator<(const Name& n) const
+	{	int compare = strcmp(last,n.last);
+		if(!compare)
+		{	compare = strcmp(first,n.first);
+		}
+		if(-1 != compare)
+		{	return false;
+		}
+		return true;
 	}
 	std::ostream& Print(std::ostream& os) const;
 	std::istream& Input(std::istream& is);
