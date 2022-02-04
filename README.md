@@ -2,7 +2,7 @@
 License MIT open source
 Copyright 2022 Robin Rowe
 
-C++ example of sorting a date ranges of data.
+C++ example of sorting and tabulating data in date ranges.
 
 ## Unit Tests
 
