@@ -45,7 +45,7 @@ Note that most of the unit tests don't pass yet because the tests don't invoke s
 	Errors while running CTest
 
 
-## Output
+## Program Output
 
 	range_count starting...
 	The most recent period of time, consecutive years,
