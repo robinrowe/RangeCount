@@ -4,6 +4,47 @@ Copyright 2022 Robin Rowe
 
 C++ example of sorting a date ranges of data.
 
+## Unit Tests
+
+Note that none of the unit tests pass because the tests don't invoke any sample data. Not an error. Merely showing that the unit test code exists.
+
+	$ ctest
+	Test project C:/code/github/RangeCountTest/build
+		Start 1: test_Database
+	1/9 Test #1: test_Database ....................***Failed    0.01 sec
+		Start 2: test_Composer
+	2/9 Test #2: test_Composer ....................***Failed    0.04 sec
+		Start 3: test_Name
+	3/9 Test #3: test_Name ........................***Failed    0.01 sec
+		Start 4: test_Lifetime
+	4/9 Test #4: test_Lifetime ....................***Failed    0.01 sec
+		Start 5: test_RangeCount
+	5/9 Test #5: test_RangeCount ..................***Failed    0.01 sec
+		Start 6: test_Blob
+	6/9 Test #6: test_Blob ........................***Failed    0.01 sec
+		Start 7: test_Matrix
+	7/9 Test #7: test_Matrix ......................***Failed    0.01 sec
+		Start 8: test_Row
+	8/9 Test #8: test_Row .........................   Passed    0.01 sec
+		Start 9: test_YearCount
+	9/9 Test #9: test_YearCount ...................***Failed    0.01 sec
+
+	11% tests passed, 8 tests failed out of 9
+
+	Total Test time (real) =   0.13 sec
+
+	The following tests FAILED:
+			  1 - test_Database (Failed)
+			  2 - test_Composer (Failed)
+			  3 - test_Name (Failed)
+			  4 - test_Lifetime (Failed)
+			  5 - test_RangeCount (Failed)
+			  6 - test_Blob (Failed)
+			  7 - test_Matrix (Failed)
+			  9 - test_YearCount (Failed)
+	Errors while running CTest
+
+
 ## Output
 
 	range_count starting...
