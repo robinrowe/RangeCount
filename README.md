@@ -6,7 +6,7 @@ C++ example of sorting and tabulating data in date ranges.
 
 ## Unit Tests
 
-Note that none of the unit tests pass because the tests don't invoke any sample data. Not an error. Merely showing that the unit test code exists.
+Note that most of the unit tests don't pass yet because the tests don't invoke sample data. Not an error. Merely showing that the unit test code exists.
 
 	$ ctest
 	Test project C:/code/github/RangeCountTest/build
