@@ -7,7 +7,11 @@
 using namespace std;
 
 ostream& YearCount::Print(ostream& os) const
-{	return os << setw(4) << date << ": " << count;
+{	os << setw(4) << date << " with " << count << " composer";
+	if(count>1)
+	{	os << "s";
+	}
+	return os;
 }
 
 istream& YearCount::Input(std::istream& is) 

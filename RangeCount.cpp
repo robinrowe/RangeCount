@@ -46,6 +46,6 @@ ostream& RangeCount::PrintMax(ostream& os) const
 		}	}
 		yearCount[0] = yearCount[1];
 	}
-	os << yearMax[0] << " to " << yearMax[1] << " (" << yearMax[0].count + yearMax[1].count << ")" ;
+	os << yearMax[0] << " to " << yearMax[1];
 	return os;
 }

@@ -6,7 +6,7 @@ C++ example of sorting and tabulating data in date ranges.
 
 ## Unit Tests
 
-Note that most of the unit tests don't pass yet because the tests don't invoke sample data. Not an error. Merely showing that the unit test code exists.
+Note that most of the unit tests don't pass yet because the tests don't invoke sample data. Not an error. Merely showing that the unit tests exist.
 
 	$ ctest
 	Test project C:/code/github/RangeCountTest/build
@@ -48,9 +48,10 @@ Note that most of the unit tests don't pass yet because the tests don't invoke s
 ## Program Output
 
 	range_count starting...
+
 	The most recent period of time, consecutive years,
 	when the largest number of composers were alive:
-	1906: 251 to 1907: 251 (502)
+	1906 with 251 composers to 1907 with 251 composers
 
 	1170: 1 composer
 	1171: 1 composer
